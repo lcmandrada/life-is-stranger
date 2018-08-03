@@ -1,3 +1,7 @@
+comment $
+Life Is Stranger
+Luke Clark M. Andrada
+$
 .model small
 .stack 100
 include life.txt
