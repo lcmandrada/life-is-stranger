@@ -10,14 +10,17 @@ A basic interactive story written for x86 TASM with the following instructions:
 - escape to go back
 
 # Build
-It was built using TASM in DOSBox, thus it must be built and executed within it.
+It was built using TASM in DOSBox, thus it must be built and run within DOSBox.
 ```
 tasm /m2 life
 tlink life
 ```
 
-It can be played by
-`life`
+It can be played by executing
+```
+life
+```
 
 # Note
-TASM is included in this repository but DOSBox isn't. DOSBox is an x86 emulator and can be downloaded from [here](https://www.dosbox.com/download.php?main=1).
+TASM is included in this repository but DOSBox isn't.  
+DOSBox is an x86 emulator and can be downloaded from [here](https://www.dosbox.com/download.php?main=1).
