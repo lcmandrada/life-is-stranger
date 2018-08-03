@@ -22,5 +22,9 @@ life
 ```
 
 # Note
-TASM is included in this repository but DOSBox isn't.  
+A batch file was written that attached a song to the executable file.
+Since it uses a portable DOSBox and VLC player, the total size of that repository is relatively huge and was not uploaded here.
+For whatever it's worth, the song is Golden Hour by Jonathan Morali.
+
+Also, TASM is included in this repository but DOSBox isn't.  
 DOSBox is an x86 emulator and can be downloaded from [here](https://www.dosbox.com/download.php?main=1).
