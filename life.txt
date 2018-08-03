@@ -1,0 +1,74 @@
+draw macro drawxloop, drawyloop, drawx, drawy, color
+	pusha
+	mov bx, drawxloop				; set x loop count
+	mov cx, drawyloop				; set y loop count
+	mov dx, drawx					; set starting x coordinate
+	mov di, drawy					; set starting y coordinate
+	mov colorx, color				; set color attribute
+	call drawz
+	popa
+endm
+
+ref macro incx, incy
+	pusha
+	mov bx, incx					; set x offset
+	mov dx, incy					; set y offset
+	call refz
+	popa
+endm
+
+checkpix macro checkxloop, checkyloop, checkx, checky, color
+	pusha
+	mov bx, checkxloop				; set x loop count
+	mov cx, checkyloop				; set y loop count
+	mov dx, checkx					; set starting x coordinate
+	mov di, checky					; set starting y coordinate
+	mov colorx, color				; set color attribute
+	call checkpixz
+	popa
+endm
+
+setwrite macro color, cstring, vstring, vsize
+	pusha
+	push ax
+	call clearwrite
+	pop ax
+	mov bl, color					; set color attribute
+	lea bp, cstring					; load character buffer
+	mov si, vstring					; load conversation buffer
+	mov di, vsize					; set size
+	add index, vsize				; set index
+	call write
+	call clickconvo
+	popa
+endm
+
+setwritex macro ostring, osize
+	pusha
+	call clearwritex
+	lea si, ostring					; load objective string
+	mov di, osize					; set size
+	call writex
+	popa
+endm
+
+setwritey macro left, right, fsize, fstring
+	pusha
+	mov cx, left					; set upper left coordinates
+	mov dx, right					; set lower right coordinates
+	mov si, fsize					; set size
+	mov di, left					; set upper left coordinates
+	lea bp, fstring					; load find string
+	call writey
+	popa
+endm
+
+setwritez macro color, size, coordinates
+	pusha
+	mov bl, color					; set color attribute
+	mov cx, size					; set size
+	mov dx, coordinates				; set coordinates
+	call writez
+	add index, size					; set index
+	popa
+endm
