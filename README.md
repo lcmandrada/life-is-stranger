@@ -2,7 +2,7 @@
 
 **Legacy Project**
 
-A basic interactive story written for x86 TASM with the following instructions:
+A basic interactive story written in x86 Assembly for TASM with the following instructions:
 - find traces and conversations to find Luna
 - arrow keys to drive the character
 - left click to interact with traces
